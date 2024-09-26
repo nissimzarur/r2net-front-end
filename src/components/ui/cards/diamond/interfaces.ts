@@ -1,8 +1,6 @@
 import { CardProps } from "@mui/material";
-import { ShapeEnum } from "@utils/constants";
+import { IDiamond } from "@utils/interfaces";
 
-export interface ICardDiamond extends CardProps{
-    price:number;
-    isLabDiamond:boolean;
-    shape: ShapeEnum;
+export interface ICardDiamond extends CardProps {
+  data: IDiamond
 }

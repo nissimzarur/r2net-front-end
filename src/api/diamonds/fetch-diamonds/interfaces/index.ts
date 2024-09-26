@@ -1,3 +1,5 @@
+import { IDiamond } from "@utils/interfaces";
+
 export interface IFetchDiamondsResponse {
   fetchDiamonds: IFetchDiamonds;
 }
@@ -7,13 +9,6 @@ export interface IFetchDiamonds {
   total: number;
 }
 
-export interface IItem {
+export interface IItem extends IDiamond{
   _id: string;
-  price: number;
-  shape: string;
-  color: string;
-  clarity: string;
-  carat: number;
-  cut: string;
-  isLabDiamond: boolean;
 }

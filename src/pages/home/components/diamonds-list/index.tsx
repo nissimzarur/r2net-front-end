@@ -8,6 +8,7 @@ import { useQuery } from "@apollo/client";
 import api from "@api/index";
 import { IFetchDiamondsResponse } from "@api/diamonds/fetch-diamonds/interfaces";
 import usePagination from "./hooks/usePagination";
+import { ShapeEnum } from "@utils/interfaces";
 
 function DiamondsList() {
   const { filter } = useContext(DiamondsListContext);
@@ -37,26 +38,20 @@ function DiamondsList() {
   if (error) return `Error! ${error.message}`;
 
   return (
-    <div className='diamonds-list-base'>
+    <div className="diamonds-list-base">
       <div className="diamonds-list-cards">
-        {diamondsData.map((diamond) => (
-          <DiamondCard
-            key={diamond._id}
-            isLabDiamond={diamond.isLabDiamond}
-            price={diamond.price}
-            shape={diamond.shape}
-          />
-        ))}
+        {diamondsData.map(({ _id, ...rest }) => {
+          return <DiamondCard key={_id} data={rest} />;
+        })}
       </div>
       <Spacer size={60} />
       <Pagination
         page={page}
-        count={totalDiamonds/PAGE_SIZE}
+        count={totalDiamonds / PAGE_SIZE}
         style={{ alignSelf: "center" }}
         onChange={handlePageChange}
       />
       <Spacer size={60} />
-
     </div>
   );
 }

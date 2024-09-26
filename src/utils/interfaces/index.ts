@@ -4,11 +4,14 @@ export interface IFilterInputs {
   labDiamond: boolean;
 }
 
-export interface IDiamond {
-  id: number;
+export interface IDiamond{
   price: number;
+  shape: string;
+  color: string;
+  clarity: string;
+  carat: number;
+  cut: string;
   isLabDiamond: boolean;
-  shape: ShapeEnum;
 }
 
 export enum ShapeEnum {

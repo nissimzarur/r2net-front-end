@@ -6,9 +6,7 @@ import { Spacer } from "@components/controllers";
 import SampleItemImage from "@assets/sample-item.jpg";
 
 function DiamondCard({
-  isLabDiamond,
-  price,
-  shape,
+  data,
   className,
   ...props
 }: ICardDiamond) {
@@ -20,11 +18,20 @@ function DiamondCard({
     >
       <img src={SampleItemImage} alt="Sample Item" className="diamond-image" />
       <Spacer size={15} />
-      <Text>Price: ${price}</Text>
+      <Text>Price: ${data.price}</Text>
       <Spacer size={10} />
-      <Text>Lab Diamond: {isLabDiamond ? "Yes" : "No"}</Text>
+      <Text>Lab Diamond: {data.isLabDiamond ? "Yes" : "No"}</Text>
       <Spacer size={10} />
-      <Text>Shape: {shape}</Text>
+      <Text>Shape: {data.shape}</Text>
+      <Spacer size={10} />
+      <Text>Carat: {data.carat}</Text>
+      <Spacer size={10} />
+      <Text>Clarity: {data.clarity}</Text>
+      <Spacer size={10} />
+      <Text>Cut: {data.cut}</Text>
+      <Spacer size={10} />
+      <Text>Color: {data.color}</Text>
+      <Spacer size={10} />
     </Card>
   );
 }
