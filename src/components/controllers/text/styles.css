@@ -1,0 +1,9 @@
+.text-base{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-large;
+    font-weight: lighter;
+    word-wrap: break-word;  
+    overflow-wrap: break-word;
+    /* inline-size: 800px; */
+    word-break: break-all;
+}

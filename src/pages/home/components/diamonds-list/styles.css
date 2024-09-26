@@ -1,0 +1,12 @@
+.diamonds-list-base{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.diamonds-list-cards{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+
+}

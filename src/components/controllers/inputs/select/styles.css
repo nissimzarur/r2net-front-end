@@ -1,0 +1,8 @@
+.select-base{
+    width: 200px;
+}
+
+.select-container{
+    display: flex;
+    flex-direction: column;
+}

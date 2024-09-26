@@ -1,0 +1,15 @@
+.switch-text {
+  font-size: large;
+  font-weight: 500;
+}
+
+.switch-container {
+  flex-direction: "row";
+  display: "flex";
+  align-items: "center";
+  border-style: "solid";
+  padding: "8px";
+  border-width: "1px";
+  border-radius: "4px";
+  border-color: "rgba(0, 0, 0, 0.23)";
+}
